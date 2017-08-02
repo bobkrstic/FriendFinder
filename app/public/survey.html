@@ -29,13 +29,13 @@
 		<h4>Name (Required)</h4>
 		<input type="text" name="" id="name" class="form-control" required >
 
-		<h4>Link to Photo Image (Required)</h4>
+		<h4>Link to Photo Image (Required) LINK TO IMAGE OF THE FLOWER</h4>
 		<input type="text" name="" id="photo" class="form-control" required >
 
 		<hr>
 
 		<h3><strong>Question 1</strong></h3>
-		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+		<h4>You are on a top of the hill looking at the ocean, you injoy the view.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -46,7 +46,7 @@
       	</select>
 
 		<h3><strong>Question 2</strong></h3>
-		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+		<h4>Sitting on the grass you are thinging: "gosh, i wish i brought weed".</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q2">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -58,7 +58,7 @@
 
 
 		<h3><strong>Question 3</strong></h3>
-		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+		<h4>Anyhow, you see a lot of flowers around you and begin to think: "amma smoke some natural stuff".</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q3">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -70,7 +70,7 @@
 
 
 		<h3><strong>Question 4</strong></h3>
-		<h4>You rarely do something just out of sheer curiosity.</h4>
+		<h4>Looking around, yellow flowers are the most appealing to your taste.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -82,7 +82,7 @@
 
 
 		<h3><strong>Question 5</strong></h3>
-		<h4>People can rarely upset you.</h4>
+		<h4>Damn, blue flowers are bigger, i can wrapp a giant joint with them.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q5">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -94,7 +94,7 @@
 
 
 		<h3><strong>Question 6</strong></h3>
-		<h4>It is often difficult for you to relate to other people’s feelings.</h4>
+		<h4>Grabbing a fistfull of the blueones you begin to roll your first ganja for today.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q6">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -106,7 +106,7 @@
 
 
 		<h3><strong>Question 7</strong></h3>
-		<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+		<h4>It hits you up in the brain and you look around again: "Wow, whatta nice field of flowers".</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -117,7 +117,7 @@
       	</select>
 
 		<h3><strong>Question 8</strong></h3>
-		<h4>You rarely get carried away by fantasies and ideas.</h4>
+		<h4>You notice a patch covered with red flowers, and say: "gosh, i really like red flowers too".</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -128,7 +128,7 @@
       	</select>
 
 		<h3><strong>Question 9</strong></h3>
-		<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+		<h4>Taking it closer, you begin to think, what kind of flowers you actually like.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q9">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -139,7 +139,7 @@
       	</select>
 
 		<h3><strong>Question 10</strong></h3>
-		<h4>You feel more energetic after spending time with a group of people.</h4>
+		<h4>You would like to find out right now...</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q10">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -159,7 +159,7 @@
 		<hr>
 	    <footer class="footer">
 	      <div class="container">
-		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/bobkrstic/FriendFinder">GitHub Repo</a></p>
 	      </div>
 	    </footer>
 
@@ -233,31 +233,14 @@
 
 	    	// Grab the URL of the website
 	    	var currentURL = window.location.origin;
-	  //   	var userDataArraySum = 0;
-
-	  //   	for (var u = 0; u < userData.scores.length; u++) {
-	  //   		userDataArraySum += parseInt(userData.scores[u]);
-	  //   	}
-
-			// ajaxAndMatch(currentURL, userData, userDataArraySum);
-
-
-
-
-
-
-
 
 
 	    	// AJAX post the data to the friends API. 
 	    	$.post(currentURL + "/api/survey", userData, function(data){
 
-	    		
-	    		
-	    		//console.log("The data stored: " + data);
-	    		console.log(data);
-	    		console.log("------data up userData below----------");
-	    		console.log(userData);
+	    		//console.log(data);
+	    		//console.log("------data up userData below----------");
+	    		//console.log(userData);
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
@@ -267,9 +250,6 @@
 
 	    	});
 
-
-
-
 		}
 		else
 		{
@@ -278,57 +258,6 @@
     	
     	return false;
     });
-
-
-// var ajaxAndMatch = function(currentURL, userData, userDataArraySum) {
-
-
-//     		$.ajax({url: currentURL + "/api/survey", method: "GET"})
-// 				.done(function(friendsArray) {
-// 					console.log("Friends array below: ");
-// 					console.log(friendsArray);
-// 					var matchArray = [];
-// 					var friendsArrayResult = 0;
-// 					// var userArrayResult = 0;
-// 					var localResult = 0;
-
-// 					console.log("This is start matchArray: " + matchArray);
-
-
-// 					for (var i = 0; i<friendsArray.length; i++) {
-// 						localResult = 0;
-// 						friendsArrayResult = 0;
-// 						// userArrayResult = 0;
-// 						console.log("mathc array 2: " + matchArray);
-// 						//console.log(friendsArray[i].scores);
-// 						for (var j=0; j<10; j++) {
-// 							console.log("match array 3: " + matchArray);
-// 							friendsArrayResult += parseInt(friendsArray[i].scores[j]);
-// 							// userArrayResult += parseInt(userData.scores[j]);
-// 						}
-
-// 						localResult = friendsArrayResult - userDataArraySum;
-// 						matchArray.push(localResult);
-// 						console.log("matchArray after push: " + matchArray);
-// 					}
-
-// 					var lowestNumber = Math.min.apply(Math, matchArray);
-
-// 					console.log("Lowest in matchArray: " + lowestNumber);
-// 					var indexOfLowest = matchArray.indexOf(lowestNumber);
-
-// 					console.log("Index of lowest: " + indexOfLowest);
-
-// 					// here i will sort matchArray and pick the lowest number which would be at position 0
-					
-// 					console.log("This is match array with results: " + matchArray);
-
-// 					//console.log("This is friends array at 0: ")
-// 					//console.log(friendsArray[indexOfLowest]);  
-// 			});
-
-
-//  }
 
 
   </script>

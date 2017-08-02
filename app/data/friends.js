@@ -1,36 +1,10 @@
 var friendsArray = [
   {
     name: "Dummy",
-    photo: "Dummy",
+    photo: "http://www.clker.com/cliparts/f/d/1/d/124016128489818755warszawianka_Gamopetalous_flower.svg.hi.png",
     scores: [10,10,10,10,10,10,10,10,10,10]
   }
 ];
 
 module.exports = friendsArray;
 
-
-
-
-
-
-
-
-
-// ```json
-// {
-//   "name":"Ahmed",
-//   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-//   "scores":[
-//       5,
-//       1,
-//       4,
-//       4,
-//       5,
-//       1,
-//       2,
-//       5,
-//       4,
-//       1
-//     ]
-// }
-// ```
