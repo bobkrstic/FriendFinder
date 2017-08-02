@@ -233,13 +233,30 @@
 
 	    	// Grab the URL of the website
 	    	var currentURL = window.location.origin;
+	  //   	var userDataArraySum = 0;
+
+	  //   	for (var u = 0; u < userData.scores.length; u++) {
+	  //   		userDataArraySum += parseInt(userData.scores[u]);
+	  //   	}
+
+			// ajaxAndMatch(currentURL, userData, userDataArraySum);
+
+
+
+
+
+
+
+
 
 	    	// AJAX post the data to the friends API. 
 	    	$.post(currentURL + "/api/survey", userData, function(data){
 
 	    		
+	    		
 	    		//console.log("The data stored: " + data);
-	    	
+	    		console.log(data);
+	    		console.log("------data up userData below----------");
 	    		console.log(userData);
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
@@ -251,26 +268,6 @@
 	    	});
 
 
-	    	$.ajax({url: currentURL + "/api/survey", method: "GET"})
-				.done(function(friendsArray) {
-					var matchArray = [];
-					var friendsArrayResult = 0;
-					var userArrayResult = 0;
-
-					for (var i = 0; i<friendsArray.length; i++) {
-						//console.log(friendsArray[i].scores);
-						for (var j=0; j<10; j++) {
-							friendsArrayResult += (friendsArray[i].scores[j] - userData.scores[j]);
-						}
-						matchArray.push(friendsArrayResult);
-					}
-
-					// here i will sort matchArray and pick the lowest number which would be at position 0
-					
-					console.log(matchArray);
-					console.log(friendsArray[matchArray[0]]);  
-				});
-
 
 
 		}
@@ -281,6 +278,57 @@
     	
     	return false;
     });
+
+
+// var ajaxAndMatch = function(currentURL, userData, userDataArraySum) {
+
+
+//     		$.ajax({url: currentURL + "/api/survey", method: "GET"})
+// 				.done(function(friendsArray) {
+// 					console.log("Friends array below: ");
+// 					console.log(friendsArray);
+// 					var matchArray = [];
+// 					var friendsArrayResult = 0;
+// 					// var userArrayResult = 0;
+// 					var localResult = 0;
+
+// 					console.log("This is start matchArray: " + matchArray);
+
+
+// 					for (var i = 0; i<friendsArray.length; i++) {
+// 						localResult = 0;
+// 						friendsArrayResult = 0;
+// 						// userArrayResult = 0;
+// 						console.log("mathc array 2: " + matchArray);
+// 						//console.log(friendsArray[i].scores);
+// 						for (var j=0; j<10; j++) {
+// 							console.log("match array 3: " + matchArray);
+// 							friendsArrayResult += parseInt(friendsArray[i].scores[j]);
+// 							// userArrayResult += parseInt(userData.scores[j]);
+// 						}
+
+// 						localResult = friendsArrayResult - userDataArraySum;
+// 						matchArray.push(localResult);
+// 						console.log("matchArray after push: " + matchArray);
+// 					}
+
+// 					var lowestNumber = Math.min.apply(Math, matchArray);
+
+// 					console.log("Lowest in matchArray: " + lowestNumber);
+// 					var indexOfLowest = matchArray.indexOf(lowestNumber);
+
+// 					console.log("Index of lowest: " + indexOfLowest);
+
+// 					// here i will sort matchArray and pick the lowest number which would be at position 0
+					
+// 					console.log("This is match array with results: " + matchArray);
+
+// 					//console.log("This is friends array at 0: ")
+// 					//console.log(friendsArray[indexOfLowest]);  
+// 			});
+
+
+//  }
 
 
   </script>

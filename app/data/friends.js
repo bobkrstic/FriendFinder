@@ -1,8 +1,8 @@
 var friendsArray = [
   {
-    name: "dummy",
-    photo: "dummy",
-    scores: [1,1,1,1,1,1,1,1,1,1]
+    name: "Dummy",
+    photo: "Dummy",
+    scores: [10,10,10,10,10,10,10,10,10,10]
   }
 ];
 
